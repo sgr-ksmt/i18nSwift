@@ -10,6 +10,9 @@
 		4D0447D31E8783780015C889 /* i18nSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0447C91E8783780015C889 /* i18nSwift.framework */; };
 		4D0447D81E8783780015C889 /* i18nSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0447D71E8783780015C889 /* i18nSwiftTests.swift */; };
 		4D0447DA1E8783780015C889 /* i18nSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0447CC1E8783780015C889 /* i18nSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DB6483A1E88D0BA00F4EAAF /* i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB648391E88D0BA00F4EAAF /* i18n.swift */; };
+		4DB6483C1E88D0EC00F4EAAF /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6483B1E88D0EC00F4EAAF /* Localizable.swift */; };
+		4DB6483E1E88D0FA00F4EAAF /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6483D1E88D0FA00F4EAAF /* LocalizedString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		4D0447D21E8783780015C889 /* i18nSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = i18nSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D0447D71E8783780015C889 /* i18nSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i18nSwiftTests.swift; sourceTree = "<group>"; };
 		4D0447D91E8783780015C889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB648391E88D0BA00F4EAAF /* i18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18n.swift; sourceTree = "<group>"; };
+		4DB6483B1E88D0EC00F4EAAF /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		4DB6483D1E88D0FA00F4EAAF /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				4D0447CC1E8783780015C889 /* i18nSwift.h */,
 				4D0447CD1E8783780015C889 /* Info.plist */,
+				4DB648391E88D0BA00F4EAAF /* i18n.swift */,
+				4DB6483B1E88D0EC00F4EAAF /* Localizable.swift */,
+				4DB6483D1E88D0FA00F4EAAF /* LocalizedString.swift */,
 			);
 			path = i18nSwift;
 			sourceTree = "<group>";
@@ -148,6 +157,7 @@
 				TargetAttributes = {
 					4D0447C81E8783780015C889 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					4D0447D11E8783780015C889 = {
@@ -196,6 +206,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB6483C1E88D0EC00F4EAAF /* Localizable.swift in Sources */,
+				4DB6483A1E88D0BA00F4EAAF /* i18n.swift in Sources */,
+				4DB6483E1E88D0FA00F4EAAF /* LocalizedString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +333,7 @@
 		4D0447DE1E8783780015C889 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -331,6 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-.i18nSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -338,6 +353,7 @@
 		4D0447DF1E8783780015C889 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +372,7 @@
 		4D0447E11E8783780015C889 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = i18nSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.i18nSwiftTests";
@@ -367,6 +384,7 @@
 		4D0447E21E8783780015C889 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = i18nSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.i18nSwiftTests";
@@ -394,6 +412,7 @@
 				4D0447DF1E8783780015C889 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D0447E01E8783780015C889 /* Build configuration list for PBXNativeTarget "i18nSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +421,7 @@
 				4D0447E21E8783780015C889 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
