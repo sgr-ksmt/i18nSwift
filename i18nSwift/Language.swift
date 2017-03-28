@@ -17,6 +17,8 @@ public final class Language {
         fileprivate static let baseStringsFileName = "Base"
     }
     
+    static var dataStore: LanguageDataStore = DefaultLanguageDataStore()
+    
     static func localizableBundle(in bundle: Bundle, language: String) -> Bundle? {
         return localizableBundlePath(in: bundle, language: language).flatMap { Bundle(path: $0) }
     }
@@ -39,17 +41,15 @@ public final class Language {
     //TODO: userdefault->mock
     public static var current: String {
         get {
-            return UserDefaults.standard.string(forKey: Constant.currentLanguageKey) ?? self.default
+            return dataStore.language(forKey: Constant.currentLanguageKey) ?? self.default
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: Constant.currentLanguageKey)
-            UserDefaults.standard.synchronize()
+            dataStore.set(newValue, forKey: Constant.currentLanguageKey)
         }
     }
     
     public static func reset() {
-        UserDefaults.standard.removeObject(forKey: Constant.currentLanguageKey)
-        UserDefaults.standard.synchronize()
+        dataStore.reset(forKey: Constant.currentLanguageKey)
     }
     
     public static var `default`: String {
