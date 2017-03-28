@@ -11,7 +11,6 @@
 		4D0447D81E8783780015C889 /* i18nSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0447D71E8783780015C889 /* i18nSwiftTests.swift */; };
 		4D0447DA1E8783780015C889 /* i18nSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0447CC1E8783780015C889 /* i18nSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DB6483A1E88D0BA00F4EAAF /* i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB648391E88D0BA00F4EAAF /* i18n.swift */; };
-		4DB6483C1E88D0EC00F4EAAF /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6483B1E88D0EC00F4EAAF /* Localizable.swift */; };
 		4DB6483E1E88D0FA00F4EAAF /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6483D1E88D0FA00F4EAAF /* LocalizedString.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +32,6 @@
 		4D0447D71E8783780015C889 /* i18nSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i18nSwiftTests.swift; sourceTree = "<group>"; };
 		4D0447D91E8783780015C889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB648391E88D0BA00F4EAAF /* i18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18n.swift; sourceTree = "<group>"; };
-		4DB6483B1E88D0EC00F4EAAF /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		4DB6483D1E88D0FA00F4EAAF /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +78,6 @@
 				4D0447CC1E8783780015C889 /* i18nSwift.h */,
 				4D0447CD1E8783780015C889 /* Info.plist */,
 				4DB648391E88D0BA00F4EAAF /* i18n.swift */,
-				4DB6483B1E88D0EC00F4EAAF /* Localizable.swift */,
 				4DB6483D1E88D0FA00F4EAAF /* LocalizedString.swift */,
 			);
 			path = i18nSwift;
@@ -206,7 +203,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DB6483C1E88D0EC00F4EAAF /* Localizable.swift in Sources */,
 				4DB6483A1E88D0BA00F4EAAF /* i18n.swift in Sources */,
 				4DB6483E1E88D0FA00F4EAAF /* LocalizedString.swift in Sources */,
 			);

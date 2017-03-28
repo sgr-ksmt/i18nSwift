@@ -17,23 +17,14 @@ import Foundation
 public final class I18n {
     private init() {}
     
-    public static func t(_ key: Localizable, _ language: String = currentLanguage, tableName: String? = nil, bundle: Bundle = Bundle.main) -> String {
-        return t(key.rawValue, language, tableName: tableName, bundle: bundle)
-    }
-    
-    public static func t(_ key: Localizable, _ language: String = currentLanguage, tableName: String? = nil, bundle: Bundle = Bundle.main, args: CVarArg...) -> String {
-        return String(format: t(key.rawValue, language, tableName: tableName, bundle: bundle), arguments: args)
-    }
-    
-    public static func t(_ key: String, _ language: String = currentLanguage, tableName: String? = nil, bundle: Bundle = Bundle.main, args: CVarArg...) -> String {
-        return String(format: t(key, language, tableName: tableName, bundle: bundle), arguments: args)
-    }
-    
-    // main function
-    public static func t(_ key: String, _ language: String = currentLanguage, tableName: String? = nil, bundle: Bundle = Bundle.main) -> String {
+    public static func t(_ key: LocalizedString, _ language: String = currentLanguage, tableName: String? = nil, bundle: Bundle = Bundle.main) -> String {
         return localizedBundlePath(for: bundle, language: language)
             .flatMap { Bundle(path: $0) }
-            .map { $0.localizedString(forKey: key, value: nil, table: tableName) } ?? key
+            .map { $0.localizedString(forKey: key.rawValue, value: nil, table: tableName) } ?? key.rawValue
+    }
+    
+    public static func t(_ key: LocalizedString, _ language: String = currentLanguage, tableName: String? = nil, bundle: Bundle = Bundle.main, args: CVarArg...) -> String {
+        return String(format: t(key, language, tableName: tableName, bundle: bundle), arguments: args)
     }
     
     private static func localizedBundlePath(for bundle: Bundle, language: String) -> String? {
