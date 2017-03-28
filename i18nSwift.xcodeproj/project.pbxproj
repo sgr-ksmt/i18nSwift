@@ -12,6 +12,7 @@
 		4D0447DA1E8783780015C889 /* i18nSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0447CC1E8783780015C889 /* i18nSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DB6483A1E88D0BA00F4EAAF /* i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB648391E88D0BA00F4EAAF /* i18n.swift */; };
 		4DB6483E1E88D0FA00F4EAAF /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6483D1E88D0FA00F4EAAF /* LocalizedString.swift */; };
+		4DD18D521E8AA73500F89D58 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D511E8AA73500F89D58 /* Language.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		4D0447D91E8783780015C889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB648391E88D0BA00F4EAAF /* i18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18n.swift; sourceTree = "<group>"; };
 		4DB6483D1E88D0FA00F4EAAF /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
+		4DD18D511E8AA73500F89D58 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				4D0447CC1E8783780015C889 /* i18nSwift.h */,
 				4D0447CD1E8783780015C889 /* Info.plist */,
 				4DB648391E88D0BA00F4EAAF /* i18n.swift */,
+				4DD18D511E8AA73500F89D58 /* Language.swift */,
 				4DB6483D1E88D0FA00F4EAAF /* LocalizedString.swift */,
 			);
 			path = i18nSwift;
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DD18D521E8AA73500F89D58 /* Language.swift in Sources */,
 				4DB6483A1E88D0BA00F4EAAF /* i18n.swift in Sources */,
 				4DB6483E1E88D0FA00F4EAAF /* LocalizedString.swift in Sources */,
 			);
