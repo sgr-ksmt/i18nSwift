@@ -13,6 +13,9 @@
 		4DB6483A1E88D0BA00F4EAAF /* i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB648391E88D0BA00F4EAAF /* i18n.swift */; };
 		4DB6483E1E88D0FA00F4EAAF /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6483D1E88D0FA00F4EAAF /* LocalizedString.swift */; };
 		4DD18D521E8AA73500F89D58 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D511E8AA73500F89D58 /* Language.swift */; };
+		4DD18D541E8AA95900F89D58 /* CurrencyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D531E8AA95900F89D58 /* CurrencyNumber.swift */; };
+		4DD18D561E8AAD3100F89D58 /* NumberFormatter+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D551E8AAD3100F89D58 /* NumberFormatter+Ex.swift */; };
+		4DD18D581E8AAD5800F89D58 /* FractionDigits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D571E8AAD5800F89D58 /* FractionDigits.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 		4DB648391E88D0BA00F4EAAF /* i18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18n.swift; sourceTree = "<group>"; };
 		4DB6483D1E88D0FA00F4EAAF /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 		4DD18D511E8AA73500F89D58 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		4DD18D531E8AA95900F89D58 /* CurrencyNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyNumber.swift; sourceTree = "<group>"; };
+		4DD18D551E8AAD3100F89D58 /* NumberFormatter+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Ex.swift"; sourceTree = "<group>"; };
+		4DD18D571E8AAD5800F89D58 /* FractionDigits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FractionDigits.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,9 @@
 				4DB648391E88D0BA00F4EAAF /* i18n.swift */,
 				4DD18D511E8AA73500F89D58 /* Language.swift */,
 				4DB6483D1E88D0FA00F4EAAF /* LocalizedString.swift */,
+				4DD18D531E8AA95900F89D58 /* CurrencyNumber.swift */,
+				4DD18D551E8AAD3100F89D58 /* NumberFormatter+Ex.swift */,
+				4DD18D571E8AAD5800F89D58 /* FractionDigits.swift */,
 			);
 			path = i18nSwift;
 			sourceTree = "<group>";
@@ -209,6 +218,9 @@
 				4DD18D521E8AA73500F89D58 /* Language.swift in Sources */,
 				4DB6483A1E88D0BA00F4EAAF /* i18n.swift in Sources */,
 				4DB6483E1E88D0FA00F4EAAF /* LocalizedString.swift in Sources */,
+				4DD18D561E8AAD3100F89D58 /* NumberFormatter+Ex.swift in Sources */,
+				4DD18D541E8AA95900F89D58 /* CurrencyNumber.swift in Sources */,
+				4DD18D581E8AAD5800F89D58 /* FractionDigits.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

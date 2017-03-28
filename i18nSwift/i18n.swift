@@ -8,12 +8,6 @@
 
 import Foundation
 
-//TODO: number
-//TODO: currency
-//TODO: percentage
-//TODO: locale
-
-
 public final class I18n {
 
     private init() {}
@@ -33,4 +27,16 @@ public final class I18n {
     
     // MARK: - currency
     
+    public static func currency(_ n: CurrencyNumber, _ locale: Locale = .current, symbol: String? = nil, separator: String? = nil, grouping: Int = 3, fractionDigits: FractionDigits? = nil) -> String {
+        
+        let formatter = NumberFormatter(.currency, locale, symbol, separator, grouping, fractionDigits)
+        return formatter.string(from: n.number) ?? n.number.stringValue
+    }
+
+    public static func currencyISO(_ n: CurrencyNumber, _ locale: Locale = .current, symbol: String? = nil, separator: String? = nil, grouping: Int = 3, fractionDigits: FractionDigits? = nil) -> String {
+        let formatter = NumberFormatter(.currencyISOCode, locale, symbol, separator, grouping, fractionDigits)
+        return formatter.string(from: n.number) ?? n.number.stringValue
+    }
+    
+    //TODO: locale(date)
 }
