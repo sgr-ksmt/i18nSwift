@@ -12,6 +12,8 @@
 		4D4ED6461E8BF79300EDCEBD /* LocalizedStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4ED6451E8BF79300EDCEBD /* LocalizedStringTests.swift */; };
 		4D4ED6481E8BFFB400EDCEBD /* LanguageDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4ED6471E8BFFB400EDCEBD /* LanguageDataSourceTests.swift */; };
 		4D4ED64A1E8C004D00EDCEBD /* MockLanguageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4ED6491E8C004D00EDCEBD /* MockLanguageDataStore.swift */; };
+		4D4ED6541E8C044D00EDCEBD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D4ED6561E8C044D00EDCEBD /* Localizable.strings */; };
+		4D4ED6591E8C056F00EDCEBD /* dummy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4ED65B1E8C056F00EDCEBD /* dummy.storyboard */; };
 		4DD18D631E8AB1ED00F89D58 /* CurrencyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D5C1E8AB1ED00F89D58 /* CurrencyNumber.swift */; };
 		4DD18D641E8AB1ED00F89D58 /* FractionDigits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D5D1E8AB1ED00F89D58 /* FractionDigits.swift */; };
 		4DD18D651E8AB1ED00F89D58 /* i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D5E1E8AB1ED00F89D58 /* i18n.swift */; };
@@ -40,6 +42,13 @@
 		4D4ED6451E8BF79300EDCEBD /* LocalizedStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStringTests.swift; sourceTree = "<group>"; };
 		4D4ED6471E8BFFB400EDCEBD /* LanguageDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageDataSourceTests.swift; sourceTree = "<group>"; };
 		4D4ED6491E8C004D00EDCEBD /* MockLanguageDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLanguageDataStore.swift; sourceTree = "<group>"; };
+		4D4ED6551E8C044D00EDCEBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D4ED65C1E8C057700EDCEBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/dummy.storyboard; sourceTree = "<group>"; };
+		4D4ED65D1E8C058700EDCEBD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/dummy.strings; sourceTree = "<group>"; };
+		4D4ED65E1E8C058700EDCEBD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D4ED65F1E8C058F00EDCEBD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/dummy.strings; sourceTree = "<group>"; };
+		4D4ED6601E8C058F00EDCEBD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D4ED6611E8C059900EDCEBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4DD18D5C1E8AB1ED00F89D58 /* CurrencyNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyNumber.swift; sourceTree = "<group>"; };
 		4DD18D5D1E8AB1ED00F89D58 /* FractionDigits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FractionDigits.swift; sourceTree = "<group>"; };
 		4DD18D5E1E8AB1ED00F89D58 /* i18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18n.swift; sourceTree = "<group>"; };
@@ -103,6 +112,8 @@
 				4D4ED6451E8BF79300EDCEBD /* LocalizedStringTests.swift */,
 				4D4ED6471E8BFFB400EDCEBD /* LanguageDataSourceTests.swift */,
 				4D4ED6491E8C004D00EDCEBD /* MockLanguageDataStore.swift */,
+				4D4ED6561E8C044D00EDCEBD /* Localizable.strings */,
+				4D4ED65B1E8C056F00EDCEBD /* dummy.storyboard */,
 			);
 			path = i18nSwiftTests;
 			sourceTree = "<group>";
@@ -198,6 +209,9 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
+				ja,
+				fr,
 			);
 			mainGroup = 4D0447BF1E8783780015C889;
 			productRefGroup = 4D0447CA1E8783780015C889 /* Products */;
@@ -222,6 +236,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4ED6541E8C044D00EDCEBD /* Localizable.strings in Resources */,
+				4D4ED6591E8C056F00EDCEBD /* dummy.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,11 +278,36 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		4D4ED6561E8C044D00EDCEBD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D4ED6551E8C044D00EDCEBD /* en */,
+				4D4ED65E1E8C058700EDCEBD /* ja */,
+				4D4ED6601E8C058F00EDCEBD /* fr */,
+				4D4ED6611E8C059900EDCEBD /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		4D4ED65B1E8C056F00EDCEBD /* dummy.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D4ED65C1E8C057700EDCEBD /* Base */,
+				4D4ED65D1E8C058700EDCEBD /* ja */,
+				4D4ED65F1E8C058F00EDCEBD /* fr */,
+			);
+			name = dummy.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		4D0447DB1E8783780015C889 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -320,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
