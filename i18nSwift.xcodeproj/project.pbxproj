@@ -10,6 +10,8 @@
 		4D0447D31E8783780015C889 /* i18nSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0447C91E8783780015C889 /* i18nSwift.framework */; };
 		4D0447DA1E8783780015C889 /* i18nSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0447CC1E8783780015C889 /* i18nSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D4ED6461E8BF79300EDCEBD /* LocalizedStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4ED6451E8BF79300EDCEBD /* LocalizedStringTests.swift */; };
+		4D4ED6481E8BFFB400EDCEBD /* LanguageDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4ED6471E8BFFB400EDCEBD /* LanguageDataSourceTests.swift */; };
+		4D4ED64A1E8C004D00EDCEBD /* MockLanguageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4ED6491E8C004D00EDCEBD /* MockLanguageDataStore.swift */; };
 		4DD18D631E8AB1ED00F89D58 /* CurrencyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D5C1E8AB1ED00F89D58 /* CurrencyNumber.swift */; };
 		4DD18D641E8AB1ED00F89D58 /* FractionDigits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D5D1E8AB1ED00F89D58 /* FractionDigits.swift */; };
 		4DD18D651E8AB1ED00F89D58 /* i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D5E1E8AB1ED00F89D58 /* i18n.swift */; };
@@ -36,6 +38,8 @@
 		4D0447D21E8783780015C889 /* i18nSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = i18nSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D0447D91E8783780015C889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D4ED6451E8BF79300EDCEBD /* LocalizedStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStringTests.swift; sourceTree = "<group>"; };
+		4D4ED6471E8BFFB400EDCEBD /* LanguageDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageDataSourceTests.swift; sourceTree = "<group>"; };
+		4D4ED6491E8C004D00EDCEBD /* MockLanguageDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLanguageDataStore.swift; sourceTree = "<group>"; };
 		4DD18D5C1E8AB1ED00F89D58 /* CurrencyNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyNumber.swift; sourceTree = "<group>"; };
 		4DD18D5D1E8AB1ED00F89D58 /* FractionDigits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FractionDigits.swift; sourceTree = "<group>"; };
 		4DD18D5E1E8AB1ED00F89D58 /* i18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18n.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 			children = (
 				4D0447D91E8783780015C889 /* Info.plist */,
 				4D4ED6451E8BF79300EDCEBD /* LocalizedStringTests.swift */,
+				4D4ED6471E8BFFB400EDCEBD /* LanguageDataSourceTests.swift */,
+				4D4ED6491E8C004D00EDCEBD /* MockLanguageDataStore.swift */,
 			);
 			path = i18nSwiftTests;
 			sourceTree = "<group>";
@@ -240,6 +246,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4ED64A1E8C004D00EDCEBD /* MockLanguageDataStore.swift in Sources */,
+				4D4ED6481E8BFFB400EDCEBD /* LanguageDataSourceTests.swift in Sources */,
 				4D4ED6461E8BF79300EDCEBD /* LocalizedStringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
