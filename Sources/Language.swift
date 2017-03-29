@@ -34,11 +34,10 @@ public final class Language {
     
     // MARK: - Language
     
-    public static func availableLanguages(_ includeBase: Bool = true) -> [String] {
-        return Bundle.main.localizations.filter { $0 != Constant.baseStringsFileName || includeBase }
+    public static func availableLanguages(_ includeBase: Bool = true, bundle: Bundle = .main) -> [String] {
+        return bundle.localizations.filter { $0 != Constant.baseStringsFileName || includeBase }
     }
     
-    //TODO: userdefault->mock
     public static var current: String {
         get {
             return dataStore.language(forKey: Constant.currentLanguageKey) ?? self.default
