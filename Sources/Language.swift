@@ -18,6 +18,7 @@ public final class Language {
     }
     
     static var dataStore: LanguageDataStore = DefaultLanguageDataStore()
+    static var languageBundle: Bundle = .main
     
     static func localizableBundle(in bundle: Bundle, language: String) -> Bundle? {
         return localizableBundlePath(in: bundle, language: language).flatMap { Bundle(path: $0) }
@@ -34,8 +35,8 @@ public final class Language {
     
     // MARK: - Language
     
-    public static func availableLanguages(_ includeBase: Bool = true, bundle: Bundle = .main) -> [String] {
-        return bundle.localizations.filter { $0 != Constant.baseStringsFileName || includeBase }
+    public static func availableLanguages(includeBase: Bool = true) -> [String] {
+        return languageBundle.localizations.filter { $0 != Constant.baseStringsFileName || includeBase }
     }
     
     public static var current: String {
@@ -52,13 +53,13 @@ public final class Language {
     }
     
     public static var `default`: String {
-        guard let preferredLanguage = Bundle.main.preferredLocalizations.first else {
+        guard let preferredLanguage = languageBundle.preferredLocalizations.first else {
             return Constant.defaultLanguage
         }
         return availableLanguages().contains(preferredLanguage) ? preferredLanguage : Constant.defaultLanguage
     }
     
-    public static func displayName(for language: String) -> String? {
+    public static func displayName(for language: String = current) -> String? {
         return NSLocale(localeIdentifier: current).displayName(forKey: .identifier, value: language)
     }
 
