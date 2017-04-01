@@ -7,3 +7,4 @@
 */
 
 "hello_world" = "こんにちは、世界";
+"have_flowers" = "私は%d本の花を持っています";
