@@ -8,7 +8,7 @@
 
 import Foundation
 
-public final class I18n {
+public final class i18n {
 
     private init() {}
     

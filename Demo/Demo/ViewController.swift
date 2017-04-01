@@ -35,18 +35,18 @@ class ViewController: UIViewController {
     
     func update() {
         titleLabel.text = Language.displayName()
-        alertButton.setTitle(I18n.t(.alertButton), for: [])
-        selectLanguageButton.setTitle(I18n.t(.chooseLanguage), for: [])
+        alertButton.setTitle(i18n.t(.alertButton), for: [])
+        selectLanguageButton.setTitle(i18n.t(.chooseLanguage), for: [])
     }
     
     @objc private func alertButtonDidTap(_: UIButton) {
-        let alert = UIAlertController(title: I18n.t(.alertTitle), message: I18n.t(.alertMessage), preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: I18n.t(.ok) , style: .default) { _ in })
+        let alert = UIAlertController(title: i18n.t(.alertTitle), message: i18n.t(.alertMessage), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: i18n.t(.ok) , style: .default) { _ in })
         show(alert, sender: nil)
     }
     
     @objc private func selectLanguageButtonDidTap(_: UIButton) {
-        let actionSheet = UIAlertController(title: nil, message: I18n.t(.chooseLanguage), preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: nil, message: i18n.t(.chooseLanguage), preferredStyle: .actionSheet)
         
         Language.availableLanguages(includeBase: false).forEach { language in
             let title = Language.displayName(for: language).map { Language.current == language ? "\($0) ✔︎" : $0 } ?? ""
@@ -55,10 +55,10 @@ class ViewController: UIViewController {
             })
         }
         
-        actionSheet.addAction(UIAlertAction(title: I18n.t(.useSystem), style: .destructive) { _ in
+        actionSheet.addAction(UIAlertAction(title: i18n.t(.useSystem), style: .destructive) { _ in
             Language.reset()
         })
-        actionSheet.addAction(UIAlertAction(title: I18n.t(.cancel), style: .cancel) { _ in })
+        actionSheet.addAction(UIAlertAction(title: i18n.t(.cancel), style: .cancel) { _ in })
         show(actionSheet, sender: nil)
     }
 }
