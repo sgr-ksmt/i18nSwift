@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Demo
+
+  Created by Suguru Kishimoto on 4/1/17.
+  Copyright © 2017 Suguru Kishimoto. All rights reserved.
+*/
+
+"alert.button" = "アラート";
+"alert.title" = "挨拶";
+"alert.message" = "こんにちは!";
+"choose_language" = "言語を選択...";
+"ok" = "OK";
+"cancel" = "Cancel";
+"use_system_language" = "端末の設定に従う";
