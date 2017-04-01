@@ -16,6 +16,7 @@ public final class Language {
         fileprivate static let defaultLanguage = "en"
         fileprivate static let stringsFileSuffix = "lproj"
         fileprivate static let baseStringsFileName = "Base"
+        fileprivate static let notificationKey = "i18n.current_language.didupdate"
     }
     
     static var dataStore: LanguageDataStore = DefaultLanguageDataStore()
@@ -47,11 +48,13 @@ public final class Language {
         set {
             let language = availableLanguages().contains(newValue) ? newValue : Constant.defaultLanguage
             dataStore.set(language, forKey: Constant.currentLanguageKey)
+            NotificationCenter.default.post(name: .CurrentLanguageDidUpdate, object: nil)
         }
     }
     
     public static func reset() {
         dataStore.reset(forKey: Constant.currentLanguageKey)
+        NotificationCenter.default.post(name: .CurrentLanguageDidUpdate, object: nil)
     }
     
     public static var `default`: String {
@@ -62,4 +65,8 @@ public final class Language {
         return NSLocale(localeIdentifier: current).displayName(forKey: .identifier, value: language)
     }
 
+}
+
+public extension Notification.Name {
+    public static let CurrentLanguageDidUpdate = Notification.Name(Language.Constant.notificationKey)
 }
