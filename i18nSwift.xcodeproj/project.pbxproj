@@ -20,6 +20,7 @@
 		4D9EDFA61E8F4C1F00698171 /* I18nTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EDFA51E8F4C1F00698171 /* I18nTests.swift */; };
 		4D9EDFAA1E8F57F900698171 /* Test.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D9EDFAC1E8F57F900698171 /* Test.strings */; };
 		4D9EDFC11E8F79AA00698171 /* LanguageObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EDFC01E8F79AA00698171 /* LanguageObserver.swift */; };
+		4D9EDFC31E8F7D7000698171 /* LanguageObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EDFC21E8F7D7000698171 /* LanguageObserverTests.swift */; };
 		4DD18D631E8AB1ED00F89D58 /* CurrencyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D5C1E8AB1ED00F89D58 /* CurrencyNumber.swift */; };
 		4DD18D641E8AB1ED00F89D58 /* FractionDigits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D5D1E8AB1ED00F89D58 /* FractionDigits.swift */; };
 		4DD18D651E8AB1ED00F89D58 /* i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D5E1E8AB1ED00F89D58 /* i18n.swift */; };
@@ -64,6 +65,7 @@
 		4D9EDFAE1E8F57FB00698171 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Test.strings; sourceTree = "<group>"; };
 		4D9EDFAF1E8F57FC00698171 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Test.strings; sourceTree = "<group>"; };
 		4D9EDFC01E8F79AA00698171 /* LanguageObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageObserver.swift; sourceTree = "<group>"; };
+		4D9EDFC21E8F7D7000698171 /* LanguageObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageObserverTests.swift; sourceTree = "<group>"; };
 		4DD18D5C1E8AB1ED00F89D58 /* CurrencyNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyNumber.swift; sourceTree = "<group>"; };
 		4DD18D5D1E8AB1ED00F89D58 /* FractionDigits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FractionDigits.swift; sourceTree = "<group>"; };
 		4DD18D5E1E8AB1ED00F89D58 /* i18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18n.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				4D9EDFA11E8F414F00698171 /* CurrencyNumberTests.swift */,
 				4D9EDFA31E8F42E300698171 /* NumberFormatterTests.swift */,
 				4D9EDFA51E8F4C1F00698171 /* I18nTests.swift */,
+				4D9EDFC21E8F7D7000698171 /* LanguageObserverTests.swift */,
 			);
 			path = i18nSwiftTests;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				4D4ED6631E8C065500EDCEBD /* LanguageTests.swift in Sources */,
 				4D4ED6481E8BFFB400EDCEBD /* LanguageDataSourceTests.swift in Sources */,
 				4D9EDFA61E8F4C1F00698171 /* I18nTests.swift in Sources */,
+				4D9EDFC31E8F7D7000698171 /* LanguageObserverTests.swift in Sources */,
 				4D4ED6461E8BF79300EDCEBD /* LocalizedStringTests.swift in Sources */,
 				4D9EDFA21E8F414F00698171 /* CurrencyNumberTests.swift in Sources */,
 			);
