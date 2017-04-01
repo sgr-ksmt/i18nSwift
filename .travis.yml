@@ -12,7 +12,7 @@ before_install:
 
 script:
   - set -o pipefail
-  - xcodebuild build-for-testing test-without-building -workspace i18nSwift.xcworkspace -scheme i18nSwift -configuration Release -sdk iphonesimulator -destination "$DESTINATION" | xcpretty -c
+  - xcodebuild build-for-testing test-without-building -workspace i18nSwift.xcworkspace -scheme i18nSwift -configuration Release -sdk iphonesimulator -destination "$DESTINATION" -enableCodeCoverage YES
   - bash <(curl -s https://codecov.io/bash)
 
 notifications:
