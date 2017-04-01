@@ -1,0 +1,6 @@
+coverage:
+    ignore:
+        - "Demo/*"
+        - "i18nSwiftTests/*"
+
+comment: false
