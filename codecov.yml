@@ -1,6 +1,12 @@
 coverage:
-    ignore:
-        - "Demo/*"
-        - "i18nSwiftTests/*"
+  ignore:
+    - "Demo/*"
+    - "i18nSwiftTests/*"
+  status:
+    patch: false
+    changes: false
+    project:
+      default:
+        target: '80'
 
 comment: false
