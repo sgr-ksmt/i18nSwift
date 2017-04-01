@@ -43,6 +43,8 @@ class LanguageTests: XCTestCase {
     }
     
     func testCurrentLanguage() {
+        XCTAssertNotNil(Language.Constant())
+        
         let defaultLanguage = Language.default
         XCTAssertEqual(defaultLanguage, Language.current)
         Language.current = "fr"

@@ -10,7 +10,8 @@ import Foundation
 
 public final class Language {
     public struct Constant {
-        private init() {}
+        internal init() {}
+        
         public static let currentLanguageKey = "i18n.current_language"
         fileprivate static let defaultLanguage = "en"
         fileprivate static let stringsFileSuffix = "lproj"
@@ -54,10 +55,7 @@ public final class Language {
     }
     
     public static var `default`: String {
-        guard let preferredLanguage = languageBundle.preferredLocalizations.first else {
-            return Constant.defaultLanguage
-        }
-        return availableLanguages().contains(preferredLanguage) ? preferredLanguage : Constant.defaultLanguage
+        return languageBundle.preferredLocalizations.first!
     }
     
     public static func displayName(for language: String = current) -> String? {

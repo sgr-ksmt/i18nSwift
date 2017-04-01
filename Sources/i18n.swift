@@ -10,7 +10,7 @@ import Foundation
 
 public final class i18n {
 
-    private init() {}
+    internal init() {}
     
     // MARK: - Localize
     
@@ -30,12 +30,12 @@ public final class i18n {
     public static func currency(_ n: CurrencyNumber, _ locale: Locale = .current, symbol: String? = nil, separator: String? = nil, grouping: Int = 3, fractionDigits: FractionDigits? = nil) -> String {
         
         let formatter = NumberFormatter(.currency, locale, symbol, separator, grouping, fractionDigits)
-        return formatter.string(from: n.number) ?? n.number.stringValue
+        return formatter.string(from: n.number)!
     }
 
     public static func currencyISO(_ n: CurrencyNumber, _ locale: Locale = .current, separator: String? = nil, grouping: Int = 3, fractionDigits: FractionDigits? = nil) -> String {
         let formatter = NumberFormatter(.currencyISOCode, locale, nil, separator, grouping, fractionDigits)
-        return formatter.string(from: n.number) ?? n.number.stringValue
+        return formatter.string(from: n.number)!
     }
     
     //TODO: locale(date)

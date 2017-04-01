@@ -27,6 +27,8 @@ class I18nTests: XCTestCase {
     }
     
     func testLocalize() {
+        
+        XCTAssertNotNil(i18n())
         let testBundle = Bundle(for: I18nTests.self)
         Language.current = "en"
         XCTAssertEqual(i18n.t(.helloWorld, bundle: testBundle), "Hello, World!")
