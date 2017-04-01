@@ -18,6 +18,7 @@
 		4D9EDFA21E8F414F00698171 /* CurrencyNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EDFA11E8F414F00698171 /* CurrencyNumberTests.swift */; };
 		4D9EDFA41E8F42E300698171 /* NumberFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EDFA31E8F42E300698171 /* NumberFormatterTests.swift */; };
 		4D9EDFA61E8F4C1F00698171 /* I18nTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EDFA51E8F4C1F00698171 /* I18nTests.swift */; };
+		4D9EDFAA1E8F57F900698171 /* Test.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D9EDFAC1E8F57F900698171 /* Test.strings */; };
 		4DD18D631E8AB1ED00F89D58 /* CurrencyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D5C1E8AB1ED00F89D58 /* CurrencyNumber.swift */; };
 		4DD18D641E8AB1ED00F89D58 /* FractionDigits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D5D1E8AB1ED00F89D58 /* FractionDigits.swift */; };
 		4DD18D651E8AB1ED00F89D58 /* i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D5E1E8AB1ED00F89D58 /* i18n.swift */; };
@@ -57,6 +58,10 @@
 		4D9EDFA11E8F414F00698171 /* CurrencyNumberTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyNumberTests.swift; sourceTree = "<group>"; };
 		4D9EDFA31E8F42E300698171 /* NumberFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatterTests.swift; sourceTree = "<group>"; };
 		4D9EDFA51E8F4C1F00698171 /* I18nTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = I18nTests.swift; sourceTree = "<group>"; };
+		4D9EDFAB1E8F57F900698171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Test.strings; sourceTree = "<group>"; };
+		4D9EDFAD1E8F57FB00698171 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Test.strings; sourceTree = "<group>"; };
+		4D9EDFAE1E8F57FB00698171 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Test.strings; sourceTree = "<group>"; };
+		4D9EDFAF1E8F57FC00698171 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Test.strings; sourceTree = "<group>"; };
 		4DD18D5C1E8AB1ED00F89D58 /* CurrencyNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyNumber.swift; sourceTree = "<group>"; };
 		4DD18D5D1E8AB1ED00F89D58 /* FractionDigits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FractionDigits.swift; sourceTree = "<group>"; };
 		4DD18D5E1E8AB1ED00F89D58 /* i18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18n.swift; sourceTree = "<group>"; };
@@ -120,6 +125,7 @@
 				4D4ED6451E8BF79300EDCEBD /* LocalizedStringTests.swift */,
 				4D4ED6471E8BFFB400EDCEBD /* LanguageDataSourceTests.swift */,
 				4D4ED6491E8C004D00EDCEBD /* MockLanguageDataStore.swift */,
+				4D9EDFAC1E8F57F900698171 /* Test.strings */,
 				4D4ED6561E8C044D00EDCEBD /* Localizable.strings */,
 				4D4ED65B1E8C056F00EDCEBD /* dummy.storyboard */,
 				4D4ED6621E8C065500EDCEBD /* LanguageTests.swift */,
@@ -248,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D9EDFAA1E8F57F900698171 /* Test.strings in Resources */,
 				4D4ED6541E8C044D00EDCEBD /* Localizable.strings in Resources */,
 				4D4ED6591E8C056F00EDCEBD /* dummy.storyboard in Resources */,
 			);
@@ -314,6 +321,17 @@
 				4D4ED65F1E8C058F00EDCEBD /* fr */,
 			);
 			name = dummy.storyboard;
+			sourceTree = "<group>";
+		};
+		4D9EDFAC1E8F57F900698171 /* Test.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D9EDFAB1E8F57F900698171 /* Base */,
+				4D9EDFAD1E8F57FB00698171 /* en */,
+				4D9EDFAE1E8F57FB00698171 /* ja */,
+				4D9EDFAF1E8F57FC00698171 /* fr */,
+			);
+			name = Test.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

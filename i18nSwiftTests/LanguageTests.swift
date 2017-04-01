@@ -52,6 +52,10 @@ class LanguageTests: XCTestCase {
         Language.reset()
         XCTAssertNotEqual("fr", Language.current)
         XCTAssertEqual(defaultLanguage, Language.current)
+        
+        Language.current = "unavailable_language"
+        XCTAssertNotEqual("unavailable_language", Language.current)
+        XCTAssertEqual(defaultLanguage, Language.current)
     }
     
     func testDisplayName() {

@@ -1,0 +1,9 @@
+/* 
+  Test.strings
+  i18nSwift
+
+  Created by Suguru Kishimoto on 4/1/17.
+  Copyright © 2017 Suguru Kishimoto. All rights reserved.
+*/
+
+"test" = "テスト!!!";

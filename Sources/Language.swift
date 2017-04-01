@@ -38,13 +38,14 @@ public final class Language {
     public static func availableLanguages(includeBase: Bool = true) -> [String] {
         return languageBundle.localizations.filter { $0 != Constant.baseStringsFileName || includeBase }
     }
-    
+        
     public static var current: String {
         get {
             return dataStore.language(forKey: Constant.currentLanguageKey) ?? self.default
         }
         set {
-            dataStore.set(newValue, forKey: Constant.currentLanguageKey)
+            let language = availableLanguages().contains(newValue) ? newValue : Constant.defaultLanguage
+            dataStore.set(language, forKey: Constant.currentLanguageKey)
         }
     }
     

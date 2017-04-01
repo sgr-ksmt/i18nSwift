@@ -12,12 +12,14 @@ import XCTest
 extension LocalizedString {
     static let helloWorld: LocalizedString = "hello_world"
     static let haveFlowers: LocalizedString = "have_flowers"
+    static let test: LocalizedString = "test"
 }
 
 class I18nTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        Language.languageBundle = Bundle(for: I18nTests.self)
     }
     
     override func tearDown() {
@@ -29,35 +31,62 @@ class I18nTests: XCTestCase {
         Language.current = "en"
         XCTAssertEqual(I18n.t(.helloWorld, bundle: testBundle), "Hello, World!")
         XCTAssertEqual(I18n.t("hello_world", bundle: testBundle), "Hello, World!")
+        
         XCTAssertEqual(I18n.t(.haveFlowers, bundle: testBundle, args: 3), "I have 3 flowers.")
         XCTAssertEqual(I18n.t("have_flowers", bundle: testBundle, args: 3), "I have 3 flowers.")
+        
+        XCTAssertEqual(I18n.t(.test, bundle: testBundle), "test")
+        XCTAssertEqual(I18n.t(.test, tableName: "Test", bundle: testBundle), "test!!!")
+        XCTAssertEqual(I18n.t("test", tableName: "Test", bundle: testBundle), "test!!!")
+        
         XCTAssertEqual(I18n.t(.helloWorld), "hello_world")
         XCTAssertEqual(I18n.t("invalid_key"), "invalid_key")
         XCTAssertEqual(I18n.t("invalid_key", bundle: testBundle), "invalid_key")
         
+        
         Language.current = "ja"
         XCTAssertEqual(I18n.t(.helloWorld, bundle: testBundle), "こんにちは、世界")
         XCTAssertEqual(I18n.t("hello_world", bundle: testBundle), "こんにちは、世界")
+        
         XCTAssertEqual(I18n.t(.haveFlowers, bundle: testBundle, args: 3), "私は3本の花を持っています")
         XCTAssertEqual(I18n.t("have_flowers", bundle: testBundle, args: 3), "私は3本の花を持っています")
+        
+        XCTAssertEqual(I18n.t(.test, bundle: testBundle), "test")
+        XCTAssertEqual(I18n.t(.test, tableName: "Test", bundle: testBundle), "テスト!!!")
+        XCTAssertEqual(I18n.t("test", tableName: "Test", bundle: testBundle), "テスト!!!")
+
         XCTAssertEqual(I18n.t(.helloWorld), "hello_world")
         XCTAssertEqual(I18n.t("invalid_key"), "invalid_key")
         XCTAssertEqual(I18n.t("invalid_key", bundle: testBundle), "invalid_key")
 
+        
         Language.current = "Base"
         XCTAssertEqual(I18n.t(.helloWorld, bundle: testBundle), "Hello, World!")
         XCTAssertEqual(I18n.t("hello_world", bundle: testBundle), "Hello, World!")
+        
         XCTAssertEqual(I18n.t(.haveFlowers, bundle: testBundle, args: 3), "I have 3 flowers.")
         XCTAssertEqual(I18n.t("have_flowers", bundle: testBundle, args: 3), "I have 3 flowers.")
+        
+        XCTAssertEqual(I18n.t(.test, bundle: testBundle), "test")
+        XCTAssertEqual(I18n.t(.test, tableName: "Test", bundle: testBundle), "test!!!")
+        XCTAssertEqual(I18n.t("test", tableName: "Test", bundle: testBundle), "test!!!")
+
         XCTAssertEqual(I18n.t(.helloWorld), "hello_world")
         XCTAssertEqual(I18n.t("invalid_key"), "invalid_key")
         XCTAssertEqual(I18n.t("invalid_key", bundle: testBundle), "invalid_key")
 
+        
         Language.current = "fr"
         XCTAssertEqual(I18n.t(.helloWorld, bundle: testBundle), "Bonjour le monde.")
         XCTAssertEqual(I18n.t("hello_world", bundle: testBundle), "Bonjour le monde.")
+        
         XCTAssertEqual(I18n.t(.haveFlowers, bundle: testBundle, args: 3), "J'ai 3 fleurs.")
         XCTAssertEqual(I18n.t("have_flowers", bundle: testBundle, args: 3), "J'ai 3 fleurs.")
+        
+        XCTAssertEqual(I18n.t(.test, bundle: testBundle), "test")
+        XCTAssertEqual(I18n.t(.test, tableName: "Test", bundle: testBundle), "test!!!")
+        XCTAssertEqual(I18n.t("test", tableName: "Test", bundle: testBundle), "test!!!")
+
         XCTAssertEqual(I18n.t(.helloWorld), "hello_world")
         XCTAssertEqual(I18n.t("invalid_key"), "invalid_key")
         XCTAssertEqual(I18n.t("invalid_key", bundle: testBundle), "invalid_key")
