@@ -9,7 +9,7 @@
 "alert.button" = "Alert";
 "alert.title" = "Greeting";
 "alert.message" = "Hello!";
-"choose_language" = "Choose Language...";
+"choose_language" = "Choose a language...";
 "ok" = "OK";
 "cancel" = "Cancel";
-"use_system_language" = "Use system language";
+"use_system_language" = "System Language";

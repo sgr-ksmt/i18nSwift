@@ -11,5 +11,5 @@
 "alert.message" = "こんにちは!";
 "choose_language" = "言語を選択...";
 "ok" = "OK";
-"cancel" = "Cancel";
+"cancel" = "キャンセル";
 "use_system_language" = "端末の設定に従う";

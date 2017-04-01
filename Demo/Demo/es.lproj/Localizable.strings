@@ -6,10 +6,10 @@
   Copyright © 2017 Suguru Kishimoto. All rights reserved.
 */
 
-"alert.button" = "Alert";
-"alert.title" = "Greeting";
-"alert.message" = "Hello!";
-"choose_language" = "Choose Language...";
+"alert.button" = "alerta";
+"alert.title" = "saludo";
+"alert.message" = "Hola!";
+"choose_language" = "Elige lengua...";
 "ok" = "OK";
-"cancel" = "Cancel";
-"use_system_language" = "Use system language";
+"cancel" = "Cancelar";
+"use_system_language" = "Idioma del sistema";

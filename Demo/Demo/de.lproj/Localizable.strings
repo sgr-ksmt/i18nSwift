@@ -7,9 +7,9 @@
 */
 
 "alert.button" = "Alert";
-"alert.title" = "Greeting";
-"alert.message" = "Hello!";
-"choose_language" = "Choose Language...";
+"alert.title" = "Gruß";
+"alert.message" = "Hallo!";
+"choose_language" = "Wähle eine Sprache...";
 "ok" = "OK";
-"cancel" = "Cancel";
-"use_system_language" = "Use system language";
+"cancel" = "stornieren";
+"use_system_language" = "Systemsprache";

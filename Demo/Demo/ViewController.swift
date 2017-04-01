@@ -23,9 +23,14 @@ class ViewController: UIViewController {
         }
     }
     
+    private var observer: LanguageObserver?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         update()
+        self.observer = LanguageObserver { [weak self] _ in
+            self?.update()
+        }
     }
 
     override func didReceiveMemoryWarning() {
