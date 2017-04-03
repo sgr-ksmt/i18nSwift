@@ -35,6 +35,7 @@ class LanguageDataSourceTests: XCTestCase {
         
         dataStore.reset(forKey: key)
         XCTAssertNil(dataStore.language(forKey: key))
+        UIButton(frame: .zero).setTitle(<#T##title: String?##String?#>, for: <#T##UIControlState#>)
     }
     
     func testMockDataStore() {
