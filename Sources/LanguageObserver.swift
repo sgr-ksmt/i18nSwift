@@ -25,7 +25,7 @@ public class LanguageObserver {
     
     @objc private func currentLanguageDidUpdate(_: Notification) {
         if isEnabled {
-            handler(Language.current)
+            handler(i18n.Language.current)
         }
     }
     

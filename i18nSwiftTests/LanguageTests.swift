@@ -13,18 +13,18 @@ class LanguageTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        Language.dataStore = MockLanguageDataStore()
-        Language.languageBundle = Bundle(for: LanguageTests.self)
+        i18n.Language.dataStore = MockLanguageDataStore()
+        i18n.Language.languageBundle = Bundle(for: LanguageTests.self)
     }
     
     override func tearDown() {
         super.tearDown()
-        Language.dataStore.reset(forKey: Language.Constant.currentLanguageKey)
+        i18n.Language.dataStore.reset(forKey: i18n.Language.Constant.currentLanguageKey)
     }
     
     func testAvailableLanguages() {
         do {
-            let availableLanguages = Language.availableLanguages()
+            let availableLanguages = i18n.Language.availableLanguages()
             XCTAssertTrue(availableLanguages.contains("Base"))
             XCTAssertTrue(availableLanguages.contains("en"))
             XCTAssertTrue(availableLanguages.contains("ja"))
@@ -33,7 +33,7 @@ class LanguageTests: XCTestCase {
         }
         
         do {
-            let availableLanguages = Language.availableLanguages(includeBase: false)
+            let availableLanguages = i18n.Language.availableLanguages(includeBase: false)
             XCTAssertFalse(availableLanguages.contains("Base"))
             XCTAssertTrue(availableLanguages.contains("en"))
             XCTAssertTrue(availableLanguages.contains("ja"))
@@ -43,31 +43,31 @@ class LanguageTests: XCTestCase {
     }
     
     func testCurrentLanguage() {
-        XCTAssertNotNil(Language.Constant())
+        XCTAssertNotNil(i18n.Language.Constant())
         
-        let defaultLanguage = Language.default
-        XCTAssertEqual(defaultLanguage, Language.current)
-        Language.current = "fr"
-        XCTAssertNotEqual(defaultLanguage, Language.current)
-        XCTAssertEqual(Language.current, "fr")
+        let defaultLanguage = i18n.Language.default
+        XCTAssertEqual(defaultLanguage, i18n.Language.current)
+        i18n.Language.current = "fr"
+        XCTAssertNotEqual(defaultLanguage, i18n.Language.current)
+        XCTAssertEqual(i18n.Language.current, "fr")
         
-        Language.reset()
-        XCTAssertNotEqual("fr", Language.current)
-        XCTAssertEqual(defaultLanguage, Language.current)
+        i18n.Language.reset()
+        XCTAssertNotEqual("fr", i18n.Language.current)
+        XCTAssertEqual(defaultLanguage, i18n.Language.current)
         
-        Language.current = "unavailable_language"
-        XCTAssertNotEqual("unavailable_language", Language.current)
-        XCTAssertEqual(defaultLanguage, Language.current)
+        i18n.Language.current = "unavailable_language"
+        XCTAssertNotEqual("unavailable_language", i18n.Language.current)
+        XCTAssertEqual(defaultLanguage, i18n.Language.current)
     }
     
     func testDisplayName() {
-        XCTAssertEqual(Language.displayName(), "English")
-        XCTAssertEqual(Language.displayName(), Language.displayName(for: "en"))
-        Language.current = "ja"
-        XCTAssertEqual(Language.displayName(), "日本語")
-        XCTAssertEqual(Language.displayName(), Language.displayName(for: "ja"))
-        Language.current = "Base"
-        XCTAssertNil(Language.displayName())
-        XCTAssertEqual(Language.displayName(), Language.displayName(for: "Base"))
+        XCTAssertEqual(i18n.Language.displayName(), "English")
+        XCTAssertEqual(i18n.Language.displayName(), i18n.Language.displayName(for: "en"))
+        i18n.Language.current = "ja"
+        XCTAssertEqual(i18n.Language.displayName(), "日本語")
+        XCTAssertEqual(i18n.Language.displayName(), i18n.Language.displayName(for: "ja"))
+        i18n.Language.current = "Base"
+        XCTAssertNil(i18n.Language.displayName())
+        XCTAssertEqual(i18n.Language.displayName(), i18n.Language.displayName(for: "Base"))
     }
 }
