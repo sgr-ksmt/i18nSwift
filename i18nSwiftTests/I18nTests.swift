@@ -9,17 +9,17 @@
 import XCTest
 @testable import i18nSwift
 
-extension LocalizedString {
-    static let helloWorld: LocalizedString = "hello_world"
-    static let haveFlowers: LocalizedString = "have_flowers"
-    static let test: LocalizedString = "test"
+extension i18n.LocalizedString {
+    static let helloWorld: i18n.LocalizedString = "hello_world"
+    static let haveFlowers: i18n.LocalizedString = "have_flowers"
+    static let test: i18n.LocalizedString = "test"
 }
 
 class I18nTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        Language.languageBundle = Bundle(for: I18nTests.self)
+        i18n.Language.languageBundle = Bundle(for: I18nTests.self)
     }
     
     override func tearDown() {
@@ -30,7 +30,7 @@ class I18nTests: XCTestCase {
         
         XCTAssertNotNil(i18n())
         let testBundle = Bundle(for: I18nTests.self)
-        Language.current = "en"
+        i18n.Language.current = "en"
         XCTAssertEqual(i18n.t(.helloWorld, bundle: testBundle), "Hello, World!")
         XCTAssertEqual(i18n.t("hello_world", bundle: testBundle), "Hello, World!")
         
@@ -46,7 +46,7 @@ class I18nTests: XCTestCase {
         XCTAssertEqual(i18n.t("invalid_key", bundle: testBundle), "invalid_key")
         
         
-        Language.current = "ja"
+        i18n.Language.current = "ja"
         XCTAssertEqual(i18n.t(.helloWorld, bundle: testBundle), "こんにちは、世界")
         XCTAssertEqual(i18n.t("hello_world", bundle: testBundle), "こんにちは、世界")
         
@@ -62,7 +62,7 @@ class I18nTests: XCTestCase {
         XCTAssertEqual(i18n.t("invalid_key", bundle: testBundle), "invalid_key")
 
         
-        Language.current = "Base"
+        i18n.Language.current = "Base"
         XCTAssertEqual(i18n.t(.helloWorld, bundle: testBundle), "Hello, World!")
         XCTAssertEqual(i18n.t("hello_world", bundle: testBundle), "Hello, World!")
         
@@ -78,7 +78,7 @@ class I18nTests: XCTestCase {
         XCTAssertEqual(i18n.t("invalid_key", bundle: testBundle), "invalid_key")
 
         
-        Language.current = "fr"
+        i18n.Language.current = "fr"
         XCTAssertEqual(i18n.t(.helloWorld, bundle: testBundle), "Bonjour le monde.")
         XCTAssertEqual(i18n.t("hello_world", bundle: testBundle), "Bonjour le monde.")
         

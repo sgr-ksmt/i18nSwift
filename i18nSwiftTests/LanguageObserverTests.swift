@@ -14,8 +14,8 @@ class LanguageObserverTests: XCTestCase {
     override func setUp() {
         super.setUp()
         observer = nil
-        Language.dataStore = MockLanguageDataStore()
-        Language.languageBundle = Bundle(for: LanguageTests.self)
+        i18n.Language.dataStore = MockLanguageDataStore()
+        i18n.Language.languageBundle = Bundle(for: LanguageTests.self)
     }
     
     override func tearDown() {
@@ -33,7 +33,7 @@ class LanguageObserverTests: XCTestCase {
             ex.fulfill()
         }
         
-        Language.current = "fr"
+        i18n.Language.current = "fr"
         
         waitForExpectations(timeout: 0.5) { _ in
         }
@@ -47,7 +47,7 @@ class LanguageObserverTests: XCTestCase {
         }
         observer.isEnabled = false
         
-        Language.current = "fr"
+        i18n.Language.current = "fr"
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             ex.fulfill()
@@ -67,10 +67,10 @@ class LanguageObserverTests: XCTestCase {
         
         observer.isEnabled = false
         
-        Language.current = "fr"
+        i18n.Language.current = "fr"
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [unowned self] in
             self.observer.isEnabled = true
-            Language.current = "ja"
+            i18n.Language.current = "ja"
         }
         
         waitForExpectations(timeout: 0.5) { _ in

@@ -22,7 +22,7 @@ class LanguageDataSourceTests: XCTestCase {
     
     func testDataStore() {
         let dataStore = DefaultLanguageDataStore()
-        let key = Language.Constant.currentLanguageKey
+        let key = i18n.Language.Constant.currentLanguageKey
         dataStore.set("en", forKey: key)
         XCTAssertEqual(dataStore.language(forKey: key), "en")
         
@@ -39,7 +39,7 @@ class LanguageDataSourceTests: XCTestCase {
     
     func testMockDataStore() {
         let dataStore = MockLanguageDataStore()
-        let key = Language.Constant.currentLanguageKey
+        let key = i18n.Language.Constant.currentLanguageKey
         dataStore.set("en", forKey: key)
         XCTAssertEqual(dataStore.language(forKey: key), "en")
         
