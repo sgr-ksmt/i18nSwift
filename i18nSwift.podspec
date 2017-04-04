@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "i18nSwift"
-  s.version          = "0.3"
+  s.version          = "0.3.1"
   s.summary          = "i18n for Swift."
   s.homepage         = "https://github.com/sgr-ksmt/i18nSwift"
   # s.screenshots     = ""
