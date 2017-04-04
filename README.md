@@ -1,7 +1,9 @@
-# i18nSwift
+<p align="center">
+  <img src="/logo.png" alt="logo" width="600" />  
+</p>
 
 i18n for Swift.  
-<br />
+
 
 [![Build Status](https://travis-ci.org/sgr-ksmt/i18nSwift.svg?branch=master)](https://travis-ci.org/sgr-ksmt/i18nSwift)
 [![GitHub release](https://img.shields.io/github/release/sgr-ksmt/i18nSwift.svg)](https://github.com/sgr-ksmt/i18nSwift/releases)
